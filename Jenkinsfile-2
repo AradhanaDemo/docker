@@ -9,6 +9,7 @@ pipeline {
         sh 'mvn --version'
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AradhanaDemo/docker.git']])
         sh 'ls'
+        deleteDir()
       }
     }
   }
